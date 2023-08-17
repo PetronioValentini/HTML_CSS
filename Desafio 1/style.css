@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face{
+    font-family: 'Android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/* CRIANDO VARIAVEIS */
+:root{
+    --cor0:rgb(220, 220, 171);
+    --cor1:rgb(244, 235, 235);
+    --cor2:rgb(3, 126, 3);
+    --cor3:rgb(137, 192, 137);
+    --fonte_destaque:'Bebas Neue', sans-serif;
+    --font_android:'Android','cursive'; /*A segunda fonte e sempre caso a primeira nao funcione (cursive) */
+}
+
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
+   
+}
+
+body{
+    background-color:var(--cor0);
+    padding: 30px 100px;
+
+    /*para ficar responsivo em celulares, sempre utilizar 320px*/
+    min-width: 294px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.imagem{
+    /*responsividiade da imagem */
+    width: 100%;
+       
+}
+
+main{
+    background-color:var(--cor1);
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+
+}
+/* TODOS p que estao dentro do main */
+main p{
+    text-indent: 20px;
+    text-align: justify;
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor2), rgb(23, 49, 12)); /*degrade */
+    background-color:var(--cor2);
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+/* TODOS que estão APENAS dentro do HEADER, MAS NÃO DE OUTRO DENTRO DELE */
+header > h1{
+    text-align: center;
+    color: var(--cor1);
+    font-weight: bold;
+    font-family:var(--fonte_destaque);
+    font-size: 3em;
+    text-shadow: 2px 2px 0px black;
+    
+}
+
+header > p{
+    text-align: center;
+    color:var(--cor1);
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px black;
+
+}
+nav > a{
+    color: rgb(120, 197, 120);
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: 0.5s; /* transicao (da um efeito legal) */
+}
+nav > a:hover{
+    color: black;
+    background-color: rgb(134, 181, 134);
+    
+}
+
+
+.importante{
+    background-color:var(--cor3);
+    text-decoration: none;
+    color:rgb(12, 48, 12);
+    font-weight: bold;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.video{
+    
+    padding: 30px;
+    background-color: rgb(106, 184, 106);
+    border-radius: 10px;
+
+
+    /*video responsivo */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 55%;
+       
+}
+
+/* video responsivo */
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+h3{
+    background-image: linear-gradient(to right, var(--cor2), transparent); /*degrade para deixar de uma cor ate a cor transparente */
+    color: var(--cor1);
+    padding: 10px;
+    margin-bottom: 0px;
+    font-family: var(--font_android);
+}
+
+.borda{
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(106, 184, 106);
+    padding: 10px;
+    margin-top: 0px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(126, 161, 77);
+    border-radius: 10px;
+}
+
+.link_mold{
+    text-decoration: none;
+    color:rgb(112, 13, 13);
+}
+
+.pequena{
+    /*para definir um tamanho maximo da imagem nao ficar muito grande */
+    max-width: 350px;
+}
+
+b{
+    color: green;
+    font-weight: bolder;
+}
+
+ul{
+    list-style-type:'\1F5F8\00A0'; /* muda a bolinha da lista por outra coisa (\1f5f8), o (\00A0) simboliza o espaco */
+    columns: 2;
+}
